@@ -1,20 +1,20 @@
-.App {
-  text-align: center;
+.App{
+  margin-right: 10px ;
+  margin-left: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container h3 {
+  color: red;
+  margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-size: large ;
+  margin: 0%;
+  color: black;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: gainsboro;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +24,30 @@
   color: white;
 }
 
+.container {
+  width: fit-content;
+  height: fit-content;
+}
+
+.container img{
+  width: 270px;
+  height: auto;
+}
+.container video{
+  width: 100%;
+  height: auto;
+}
+.card {
+  background-color: white;
+  width: 20%;
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 10%;
+}
+
 .App-link {
-  color: #61dafb;
+  color: #282c34;
 }
 
 @keyframes App-logo-spin {
