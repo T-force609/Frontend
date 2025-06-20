@@ -1,0 +1,15 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Override datepicker styles
+.react-datepicker {
+  @apply shadow-lg border border-gray-200 rounded-md font-sans;
+}
+.react-datepicker__header {
+  @apply bg-gray-100 border-b border-gray-200;
+}
+.react-datepicker__day--selected {
+  @apply bg-blue-500 text-white;
+} */

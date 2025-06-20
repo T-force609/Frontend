@@ -34,7 +34,7 @@ function ProjectCard() {
                     {project.image && (<img src={project.image} alt={project.title} />)}
                     {project.video && (<video controls> <source src={project.video} type='video/mp4' /></video>)}
                     <h3>{project.title}</h3>
-                    <p>{project.description.trim(0, 10)}</p>
+                    <p>{project.description.substring(0, 40)}...</p>
 
                 </div>
             ))}
