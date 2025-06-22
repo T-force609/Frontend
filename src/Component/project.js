@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
 
 function ProjectCard() {
     const [projects, setProjects] = useState([])
@@ -28,16 +29,22 @@ function ProjectCard() {
     if (error) return <div>Error: {error}</div>;
     
     return (
-        <div className="container">
+        <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#041127] text-white text-[calc(10px+2vmin)]">
             {projects.map(project => (
-                <div className="card" key={project.id}>
-                    {project.image && (<img src={project.image} alt={project.title} />)}
-                    {project.video && (<video controls> <source src={project.video} type='video/mp4' /></video>)}
-                    <h3>{project.title}</h3>
-                    <p>{project.description.substring(0, 40)}...</p>
-
-                </div>
-            ))}
+                project.id ?(
+                    <Link to={`/projects/${project.id}`} key={project.id } className="card bg-[#0a1a3a] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        <div className="h-48 overflow-hidden">
+                            {project.image && (<img src={project.image} alt={project.title} />)}
+                            {project.video && (<video controls> <source src={project.video} type='video/mp4' /></video>)}
+                        </div>
+                        <div className="p-6" >
+                            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                            <p className="text-gray-300">{project.description.substring(0, 40)}...</p>
+                            <button className="mt-4 px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition">view detail</button>
+                        </div>
+                    </Link>
+                ) : null           
+    ))}
         </div>
     )
 }

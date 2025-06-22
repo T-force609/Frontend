@@ -5,7 +5,7 @@ function Footer() {
           {/* Brand Column */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">AJ-Segun</h3>
-            <p className="mb-4">Creating immersive 3D experiences, robust web applications, and intelligent ML solutions</p>
+            <p className="mb-4 text-gray-400" >Creating immersive 3D experiences, robust web applications, and intelligent ML solutions</p>
             <div className="flex space-x-4">
               <a href="/"><i className="fab fa-artstation text-xl hover:text-blue-400"></i></a>
               <a href="/"><i className="fab fa-github text-xl hover:text-white"></i></a>
@@ -43,7 +43,7 @@ function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <i className="fas fa-envelope mr-2 text-blue-400"></i>
-                contact@ajsegun.dev
+                ajibadejohn30@gmail.com
               </li>
               <li className="flex items-center">
                 <i className="fas fa-map-marker-alt mr-2 text-red-400"></i>
