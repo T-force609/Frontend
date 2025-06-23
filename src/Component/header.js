@@ -1,4 +1,4 @@
-import ImageIcon from './ImageIcon.jpeg'
+import ImageIcon from '../ImageIcon.jpeg'
 function Header() {
     return (
       <header className="bg-gray-900 text-white py-4 px-6 sticky top-0 z-50">

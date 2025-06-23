@@ -77,7 +77,7 @@ function ProjectDetail() {
                                 </span>
                             ))}
                         </div>
-                        <p className="text-lg mb-6">{project.description}</p>
+                        <p className="text-lg text-gray-400 mb-6">{project.description}</p>
                         
                         {project.additional_details && (
                             <div className="mb-6">
