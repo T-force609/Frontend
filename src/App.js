@@ -28,7 +28,7 @@ function App() {
         <div className='App-header'>
           <Routes>
             <Route element={<Layout />} />
-            <Route path='codewithajdev.onrender.com/' element={<Home />} />
+            <Route path='/' element={<Home />} />
               <Route exact path='/project' element={<ProjectCard />} />
               <Route path='projects/:id' element={<ProjectDetail />} />
               <Route exact path='/contact' element={<ContactPage />} />
