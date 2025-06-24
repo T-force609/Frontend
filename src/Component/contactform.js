@@ -21,7 +21,7 @@ const ContactForm = () => {
                 deadline: deadline ? deadline.toISOString().split('T')[0] : null
             };
 
-            const response = await fetch('http://localhost:8000/api/contact_request/', {
+            const response = await fetch('http://codewithajdev.render.com/api/contact_request/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
