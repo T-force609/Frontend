@@ -14,7 +14,7 @@ function ProjectDetail() {
             return;
         }
 
-        fetch(`http://localhost:8000/api/projects/${id}/`)
+        fetch(`http://codewithajdev-api.onrender.com/api/projects/${id}/`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -50,7 +50,7 @@ function ProjectDetail() {
                     <div className="h-96 overflow-hidden">
                         {project.image && (
                             <img 
-                                src={`http://localhost:8000/${project.image}`} 
+                                src={`http://codewithajdev-api.onrender.com/${project.image}`} 
                                 alt={project.title}
                                 className="w-full h-full object-cover"
                             />
