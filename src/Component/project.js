@@ -29,7 +29,7 @@ function ProjectCard() {
     if (error) return <div>Error: {error}</div>;
     
     return (
-        <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#041127] text-white text-[calc(10px+2vmin)]">
+        <div className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#041127] text-white text-[calc(10px+2vmin)] sm:flex-col items-center  justify-center bg-[#041127] text-white text-[calc(10px+2vmin)]">
             {projects.map(project => (
                 project.id ?(
                     <Link to={`/projects/${project.id}`} key={project.id } className="card bg-[#0a1a3a] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">

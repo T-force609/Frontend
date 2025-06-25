@@ -1,17 +1,18 @@
-import ImageIcon from '../ImageIcon.jpeg'
+import AjLogo from '../AjLogo.png'
+
 function Header() {
     return (
       <header className="bg-gray-900 text-white py-4 px-6 sticky top-0 z-50">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           {/* Logo/Name */}
           <div className="flex items-center mb-4 md:mb-0">
-            <div className="bg-gray-700 w-10 h-10 rounded-full mr-3 overflow-hidden"><img src={ImageIcon} alt='icon' /></div>
+            <div className="bg-gray-700 w-10 h-10 rounded-full mr-3 overflow-hidden"><img src={AjLogo} alt='icon' className='w-full h-full' /></div>
             <h1 className="text-lg font-bold">AJ-Segun Portfolio</h1>
             
           </div>
   
           {/* Navigation */}
-          <nav className="flex space-x-1 md:space-x-6">
+          <nav className="flex space-x-1 md:space-x-6 ">
           <a href="/" className="nav-link hover:text-red-400 transition">
               <i className="fas fa-cubes mr-2"></i>Home
             </a>
