@@ -5,9 +5,11 @@ function ProjectCard() {
     const [projects, setProjects] = useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
+    const API_BASE_URL = process.env.REACT_APP_API_URL;
+// ... then use it like: fetch(`${API_BASE_URL}/api/your-endpoint/`)
 
     useEffect(() => {
-        fetch("https://codewithajdev-api.onrender.com/api/projects/")
+        fetch(`${API_BASE_URL}/api/projects/`)
             .then(response =>{
                 if (!response.ok){
                     throw new Error(`HTTP error! status: ${response.status}`);
