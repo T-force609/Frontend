@@ -6,7 +6,7 @@ function ProjectCard() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const API_BASE_URL=process.env.REACT_APP_API_URL;
-// ... then use it like: fetch(`${API_BASE_URL}/api/your-endpoint/`)
+// ... then use it like: fetch(`${API_BASE_URL}/api/projects/`)
 
     useEffect(() => {
         fetch(`${API_BASE_URL}/api/projects/`)
