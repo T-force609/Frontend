@@ -9,7 +9,7 @@ function ProjectCard() {
 // ... then use it like: fetch(`${API_BASE_URL}/api/projects/`)
 
     useEffect(() => {
-        fetch(`${API_BASE_URL}/api/projects/`)
+        fetch('https://codewithajdev-api.onrender.com/api/projects/')
             .then(response =>{
                 if (!response.ok){
                     throw new Error(`HTTP error! status: ${response.status}`);
