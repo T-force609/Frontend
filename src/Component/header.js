@@ -12,7 +12,7 @@ function Header() {
           </div>
   
           {/* Navigation */}
-          <nav className="flex space-x-1 md:space-x-6 ">
+          <nav className="lg:flex space-x-1 md:flex space-x-6 sm:hidden">
           <a href="/" className="nav-link hover:text-red-400 transition">
               <i className="fas fa-cubes mr-2"></i>Home
             </a>
@@ -31,12 +31,13 @@ function Header() {
             <a href="/skill" className="nav-link hover:text-yellow-400 transition">
               <i className="fas fa-chart-bar mr-2"></i>Skills
             </a>
+            <a href="/contact" className="mt-4 md:mt-0 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">
+              <i className="fas fa-envelope mr-2"></i>Contact Me
+            </a>
           </nav>
   
           {/* Contact CTA */}
-          <a href="/contact" className="mt-4 md:mt-0 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">
-            <i className="fas fa-envelope mr-2"></i>Contact Me
-          </a>
+          
         </div>
       </header>
     );
