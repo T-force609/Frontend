@@ -50,7 +50,7 @@ function ProjectDetail() {
                     <div className="h-96 overflow-hidden">
                         {project.image && (
                             <img 
-                                src={`http://localhost:8000/${project.image}`} 
+                                src={project.image}
                                 alt={project.title}
                                 className="w-full h-full object-cover"
                             />
