@@ -12,7 +12,7 @@ function Header() {
           </div>
   
           {/* Navigation */}
-          <nav className="lg:flex space-x-1 md:flex space-x-6 sm:hidden">
+          <nav className="hidden lg:flex space-x-1 md:flex space-x-6 sm:hidden">
           <a href="/" className="nav-link hover:text-red-400 transition">
               <i className="fas fa-cubes mr-2"></i>Home
             </a>
