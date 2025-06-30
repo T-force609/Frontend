@@ -3,7 +3,7 @@ import ImageIcon from './ImageIcon.jpeg'
 const Home = () => {
 
     return (
-        <div className="w-full min-h-screen flex flex-row bg-gradient-to-r from blue-400 via-gray-500 to-black-900">
+        <div className="w-full min-h-screen flex flex-col md:flex-row ">
             <div className=" rounded-full overflow-hidden w-[300px] h-[300px] ml-20 mt-[100px] mr-20 border-[10px] border-red-300">
                 <img src={ImageIcon} alt="icon"/>
             </div>
