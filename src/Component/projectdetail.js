@@ -58,7 +58,7 @@ function ProjectDetail() {
                         {project.video && (
                             <video controls className="w-full h-full object-cover">
                                 <source 
-                                    src={project.video} 
+                                    src={`https://codewithajdev-api.onrender.com${project.video}`} 
                                     type="video/mp4" 
                                 />
                             </video>
