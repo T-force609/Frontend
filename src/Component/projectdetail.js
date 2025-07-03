@@ -14,7 +14,7 @@ function ProjectDetail() {
             return;
         }
 
-        fetch(`http://localhost:8000/api/projects/${id}/`)
+        fetch(`http://codewithajdev-api.onrender.com/api/projects/${id}/`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
