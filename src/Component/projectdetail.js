@@ -50,7 +50,7 @@ function ProjectDetail() {
                     <div className="h-96 overflow-hidden">
                         {project.image && (
                             <img 
-                                src={`https://codewithajdev-api.onrender.com${project.image}`}
+                                src={project.image}
                                 alt={project.title}
                                 className="w-full h-full object-cover"
                             />
