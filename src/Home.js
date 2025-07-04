@@ -4,7 +4,7 @@ const Home = () => {
 
     return (
         <div className="w-full min-h-screen flex flex-col md:flex-row ">
-            <div className=" rounded-full overflow-hidden w-[150px] h-[150px] ml-20 mt-[100px] mr-20 border-[10px] border-red-300 sm:w-[300px] h-[300px]">
+            <div className=" rounded-full overflow-hidden w-[150px] h-[300px] ml-20 mt-[100px] mr-20 border-[10px] border-red-300 sm:w-[300px] h-[300px]">
                 <img src={ImageIcon} alt="icon" className="w-full h-full"/>
             </div>
             <div className="block w-full h-full md:flex w-2/3 h-2/3 pt-20 justify-center ">
