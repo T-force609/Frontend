@@ -47,7 +47,7 @@ function Footer() {
               </li>
               <li className="flex items-center">
                 <i className="fas fa-map-marker-alt mr-2 text-red-400"></i>
-                Lagos, Nigeria
+                Bauchi, Nigeria
               </li>
               <li className="flex items-center">
                 <i className="fas fa-file-pdf mr-2 text-yellow-400"></i>
