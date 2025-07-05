@@ -53,7 +53,7 @@ function Header() {
           <img 
             src={toggle ? Close : menu} 
             alt='menu' 
-            className='w-7 h-7 cursor-pointer'
+            className='w-7 h-7 cursor-pointer filter invert brightness-0'
             onClick={() => setToggle(!toggle)} 
           /> 
         </div>
