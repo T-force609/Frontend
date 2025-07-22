@@ -7,10 +7,9 @@ import "react-datepicker/dist/react-datepicker.css";
 const ContactForm = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [deadline, setDeadline] = useState(null);
-    const [isSubmitting, setIsSubmitting] = useState(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
 
-    const csrftoken = getCookie('csrftoken')
     const onSubmit = async (data) => {
         setIsSubmitting(true);
         setSubmitStatus(null);
@@ -25,26 +24,31 @@ const ContactForm = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-CSRFToken': getCSRFToken(),
+                    'X-CSRFToken': getCookie('csrftoken'),
                 },
-               body: JSON.stringify({
-                name: formData.name,
-                email: formData.email,
-                request_type: formData.request_type,
-                project_details: formData.project_details,
-               }),
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    request_type: formData.request_type,
+                    project_details: formData.project_details,
+                }),
             });
-            .then(async (response) => {
-              if (!response.ok) {
-                const errorData = await response.json(); // Get detailed error
-                throw new Error(errorData.message || JSON.stringify(errorData));
-              }
-              return response.json();
-            })
-            .catch((error) => {
-              console.error('Submission error:', error);
-              // Display user-friendly error message
-            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Submission failed');
+            }
+
+            const result = await response.json();
+            setSubmitStatus('success');
+            reset();
+        } catch (error) {
+            console.error('Submission error:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <div className="max-w-2xl mx-auto p-6 bg-blue-400 rounded-lg shadow-md">
