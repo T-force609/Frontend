@@ -32,6 +32,7 @@ const ContactForm = () => {
                     request_type: formData.request_type,
                     project_details: formData.project_details,
                 }),
+                console.log("CSRF Token:", getCookie('csrftoken'));
             });
 
             if (!response.ok) {
