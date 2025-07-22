@@ -31,8 +31,8 @@ const ContactForm = () => {
                     email: formData.email,
                     request_type: formData.request_type,
                     project_details: formData.project_details,
-                }),
-                console.log("CSRF Token:", getCookie('csrftoken'));
+                };
+            console.log("CSRF Token:", getCookie('csrftoken'));),
             });
 
             if (!response.ok) {
