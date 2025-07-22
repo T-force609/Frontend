@@ -25,26 +25,26 @@ const ContactForm = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-CSRFToken': csrftoken
+                    'X-CSRFToken': getCSRFToken(),
                 },
-                body: JSON.stringify(formData),
+               body: JSON.stringify({
+                name: formData.name,
+                email: formData.email,
+                request_type: formData.request_type,
+                project_details: formData.project_details,
+               }),
             });
-            if (response.ok) {
-                setSubmitStatus('success');
-                reset();
-                setDeadline(null);
-            } else {
-                const errorData = await response.json();
-                setSubmitStatus('error');
-                console.error('Submission error:', errorData);
-            }
-        } catch (error) {
-            setSubmitStatus('error');
-            console.error('Network error:', error);
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
+            .then(async (response) => {
+              if (!response.ok) {
+                const errorData = await response.json(); // Get detailed error
+                throw new Error(errorData.message || JSON.stringify(errorData));
+              }
+              return response.json();
+            })
+            .catch((error) => {
+              console.error('Submission error:', error);
+              // Display user-friendly error message
+            });
 
     return (
         <div className="max-w-2xl mx-auto p-6 bg-blue-400 rounded-lg shadow-md">
